@@ -1,4 +1,4 @@
-package com.pvr.spring.spring5sample;
+package com.pvr.spring5sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
