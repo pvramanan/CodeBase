@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
+import org.hibernate.annotations.Cascade;
+import org.hibernate.annotations.CascadeType;
+
 @Entity
 public class Book {
 
@@ -24,6 +27,7 @@ public class Book {
 
 	private final String publisher;
 
+	@Cascade(CascadeType.ALL)
 	@ManyToMany
 	@JoinTable(name = "author_Book", joinColumns = @JoinColumn(referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(referencedColumnName = "id"))
 	private final Set<Author> authors = new HashSet<>();
